@@ -2,7 +2,7 @@ import random
 
 def rnd(a,b=0): 
   if b==0: b,a = a,0
-  return random.randint(a,b)
+  return random.randint(a,b-1)
 
 #blob_tick =
 class Blob5:
@@ -11,6 +11,7 @@ class Blob5:
     self.halfway = self.duration_s*0.5
     self.passed = 0 # better names?
     self.pos = (rnd(8),rnd(8))
+    print('newpos', self.pos[0], self.pos[1])
     self.color1 = (rnd(255), rnd(255), rnd(255))  
   #
   def update(self, blob_tick): 
@@ -34,7 +35,7 @@ def updateBlobs(blob_tick):
   global blobs
   rate=rnd(100)
   if rate<9 and len(blobs)<100: spawn(rnd(1,4), blobs)
-  print('drawStuff, len:', len(blobs))
+  #print('drawStuff, len:', len(blobs))
   nextBlobs=[]
   for blob in blobs:
     done = blob.update(blob_tick)

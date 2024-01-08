@@ -1,5 +1,7 @@
 #!/usr/bin/python
 from sense_hat import SenseHat
+sense = SenseHat()
+
 from blob5 import updateBlobs #Blob5 as Blob
 import time
 
@@ -11,8 +13,8 @@ def drawBlobs_PI(blobs):
     p = blob.pos
     #rect = pygame.Rect(p[0],p[1],5,5)
     #window.fill(color,rect)
-    print('color:', color)
-    SenseHat.set_pixel(p[0], p[1], color)
+    #print('color:', color, 'len:', len(color), p)
+    sense.set_pixel(p[0], p[1], color)
 
 
 while True: #for i in range(1,100):

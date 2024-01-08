@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import pygame
 from blob5 import updateBlobs #Blob5 as Blob
 

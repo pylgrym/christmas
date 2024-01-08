@@ -1,3 +1,4 @@
+#!/usr/bin/python
 import pygame
 import random
 def rnd(a,b=0): 
